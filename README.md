@@ -115,3 +115,16 @@ Curated list of machine-consumable security data feeds, advisory databases, and 
 | FOSSA Malware Impacted Packages | `aggregator` | Malware-impacted packages | Third-party curated dataset | https://github.com/fossas/fossa-malware-impacted-packages |
 | Malware Packages (community list) | `aggregator` | Malware packages | Community-maintained list | https://github.com/whodinner/malware-packages |
 | Typosquatting Dataset | `aggregator` | Typosquatting packages | Derived dataset | https://github.com/ecosyste-ms/typosquatting-dataset |
+
+## Schemas and standards
+| Name | Purpose | Link |
+| --- | --- | --- |
+| OSSF OSV Schema | Advisory/vulnerability exchange schema | https://github.com/ossf/osv-schema |
+
+## Tools and secondary indexes
+| Name | Type | Notes | Link |
+| --- | --- | --- | --- |
+| cve-search | Tool | Consumer/index over vulnerability data sources | https://github.com/cve-search/cve-search |
+| Docker Scout advisory database | Secondary index / aggregator | Documents upstream advisory sources used for container image analysis | https://docs.docker.com/scout/deep-dive/advisory-db-sources/ |
+| Awesome CVE PoC | Secondary index | Useful discovery list, not a primary feed | https://github.com/qazbnm456/awesome-cve-poc |
+| Awesome Security | Secondary index | Broad security list, not focused on feeds | https://github.com/sbilly/awesome-security |

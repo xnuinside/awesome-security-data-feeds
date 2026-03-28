@@ -1,5 +1,5 @@
 # awesome-security-data-feeds
-Curated list of machine-consumable security data feeds, advisory databases, and primary upstream sources.
+Curated list of machine-readable security feeds, vulnerability databases, advisory sources, and raw security data for automation, aggregation, and vulnerability management.
 
 ## Scope
 - Includes: advisory databases, vulnerability feeds, machine-readable vendor advisories, raw upstream data repos, enrichment datasets

@@ -40,9 +40,6 @@ Curated list of machine-consumable security data feeds, advisory databases, and 
 | PyUp Safety DB | `aggregator` | Python / PyPI | Third-party curated database | https://github.com/pyupio/safety-db |
 | Haskell Security Advisories | `official` | Haskell | Haskell ecosystem advisories; represented in OSV | https://github.com/haskell/security-advisories |
 | Pub.dev package advisories via GitHub Advisory Database | `official` | Dart / Pub | Downstream of GHADB; pub.dev directs package advisories to GitHub Security Advisories / GitHub Advisory Database; represented in OSV (Pub ecosystem) | https://pub.dev/security |
-| Swift.org Security Updates | `official` | Swift | Project/security update stream, not a full package-registry advisory DB; represented in OSV (Swift ecosystem coverage) | https://www.swift.org/support/security.html |
-| Apache Maven Security Reports | `official` | Maven | Maven project/component advisories, not a central registry-wide package advisory feed; represented in OSV (Maven ecosystem coverage) | https://maven.apache.org/security |
-| Node.js Security WG | `official` | Node.js | More process/advisory hub than a clean feed | https://github.com/nodejs/security-wg |
 
 ## Vendor advisories
 | Name | Label | Scope | Format / Access | Link |
@@ -54,6 +51,22 @@ Curated list of machine-consumable security data feeds, advisory databases, and 
 | Cisco Security Advisories | `official` | Cisco products | Website, downloadable CSAF on advisory pages | https://tools.cisco.com/security/center/publicationListing.x |
 | Oracle Critical Patch Updates and Security Alerts | `official` | Oracle products | Website | https://www.oracle.com/technetwork/topics/security/alerts-086861.html |
 | Chainguard Security Advisories | `official` | Chainguard images/packages | Website | https://images.chainguard.dev/security/ |
+
+## Project and framework advisories
+| Name | Label | Scope | Format / Access | Link |
+| --- | --- | --- | --- | --- |
+| Spring Security Advisories | `official` | Spring ecosystem | Security advisories hub | https://spring.io/security/ |
+| Django security releases | `official` | Django | Security release archive | https://docs.djangoproject.com/en/6.0/releases/security/ |
+| Drupal Security Advisories | `official` | Drupal | Security advisories hub | https://www.drupal.org/security |
+| Ruby on Rails security releases | `official` | Ruby on Rails | Security release pages | https://rubyonrails.org/category/releases |
+| PostgreSQL security information | `official` | PostgreSQL | Security advisories hub | https://www.postgresql.org/support/security/ |
+| nginx security advisories | `official` | nginx | Advisory pages | https://nginx.org/en/security_advisories.html |
+| curl security advisories | `official` | curl | CVE and advisory pages | https://curl.se/docs/security.html |
+| Apache HTTP Server vulnerabilities | `official` | Apache HTTP Server | Advisory pages and JSON vulnerability feed | https://httpd.apache.org/security/vulnerabilities-httpd.json |
+| Apache Tomcat security pages | `official` | Apache Tomcat | Version-specific vulnerability pages | https://tomcat.apache.org/security-9 |
+| Apache Kafka CVE list | `official` | Apache Kafka | CVE list with fixed versions | https://kafka.apache.org/community/cve-list/ |
+| Apache ZooKeeper security | `official` | Apache ZooKeeper | Security page with CVEs and affected versions | https://zookeeper.apache.org/security.html |
+| Elastic product security advisories | `official` | Elastic products | Security announcements and advisories | https://www.elastic.co/product-security/ |
 
 ## OS and distro feeds
 | Name | Label | Scope | Format / Access | Link |

@@ -32,6 +32,7 @@ Curated list of machine-readable security feeds, vulnerability databases, adviso
 | Name | Label | Ecosystem | Notes | Link |
 | --- | --- | --- | --- | --- |
 | Go Vulnerability Database | `official` | Go | HTML, API/JSON; primary Go vuln feed; overlaps GHADB (documented GitHub import source); represented in OSV | https://vuln.go.dev/ |
+| npm audit advisory endpoints | `official` | JavaScript / npm | API/JSON via registry audit endpoints (`Bulk Advisory` and `Quick Audit`) used by `npm audit` | https://docs.npmjs.com/cli/v8/commands/npm-audit/ |
 | NuGet Vulnerability Info API | `official` | .NET / NuGet | API/JSON vulnerability files; Microsoft docs use GitHub Advisories Database as an example upstream, but nuget.org backing source not verified here; represented in OSV (NuGet ecosystem) | https://learn.microsoft.com/en-us/nuget/api/vulnerability-info |
 | RustSec Advisory Database | `official` | Rust | Git repo (TOML advisories); overlaps GHADB (documented GitHub import source); represented in OSV | https://github.com/RustSec/advisory-db |
 | RubySec Advisory Database | `official` | Ruby | Git repo (YAML advisories); overlaps GHADB (documented GitHub import source) | https://github.com/rubysec/ruby-advisory-db |
@@ -39,7 +40,6 @@ Curated list of machine-readable security feeds, vulnerability databases, adviso
 | PyPA Advisory Database | `official` | Python / PyPI | Git repo (OSV JSON advisories); overlaps GHADB (documented GitHub import source); represented in OSV | https://github.com/pypa/advisory-database |
 | PyUp Safety DB | `aggregator` | Python / PyPI | Git repo (JSON/insecure_full.json) | https://github.com/pyupio/safety-db |
 | Haskell Security Advisories | `official` | Haskell | Git repo (OSV-style advisories); represented in OSV | https://github.com/haskell/security-advisories |
-| Pub.dev package advisories via GitHub Advisory Database | `official` | Dart / Pub | HTML guidance; downstream of GHADB; pub.dev directs package advisories to GitHub Security Advisories / GitHub Advisory Database; represented in OSV (Pub ecosystem) | https://pub.dev/security |
 
 ## Vendor advisories
 | Name | Label | Scope | Format / Access | Link |
@@ -61,9 +61,12 @@ Curated list of machine-readable security feeds, vulnerability databases, adviso
 | Spring Security Advisories | `official` | Spring ecosystem | HTML advisory hub | https://spring.io/security/ |
 | Django security releases | `official` | Django | HTML archive | https://docs.djangoproject.com/en/6.0/releases/security/ |
 | Drupal Security Advisories | `official` | Drupal | HTML advisory hub | https://www.drupal.org/security |
-| WordPress security releases | `official` | WordPress | HTML archive and announcements | https://wordpress.org/news/category/security/ |
+| WordPress security releases | `official` | WordPress | HTML security archive focused on vulnerability and security-release announcements | https://wordpress.org/news/category/security/ |
 | Patchstack vulnerability database | `aggregator` | WordPress ecosystem | HTML database/search; large vulnerability database for WordPress plugins and themes | https://patchstack.com/database |
-| Ruby on Rails security releases | `official` | Ruby on Rails | HTML release pages | https://rubyonrails.org/category/releases |
+| Eclipse Known Vulnerabilities | `official` | Eclipse Foundation projects | Dedicated vulnerability/advisory page for Eclipse projects and Eclipse-operated sites | https://www.eclipse.org/security/known/ |
+| OpenJDK Vulnerability Advisories | `official` | OpenJDK / Java | HTML advisory archive with affected/fixed release tables, CVE references, and risk matrices | https://openjdk.org/groups/vulnerability/advisories/ |
+| OpenSSH security page | `official` | OpenSSH | HTML security notices archive with vulnerability-specific entries and release references | https://www.openssh.org/security.html |
+| NixOS security advisories | `official` | Nix / NixOS ecosystem | Dedicated security advisory category with vulnerability-specific posts, affected configurations, fixes, and upgrade guidance | https://discourse.nixos.org/c/announcements/security/56 |
 | PostgreSQL security information | `official` | PostgreSQL | HTML advisories hub | https://www.postgresql.org/support/security/ |
 | nginx security advisories | `official` | nginx | HTML advisory pages | https://nginx.org/en/security_advisories.html |
 | curl security advisories | `official` | curl | HTML advisory pages | https://curl.se/docs/security.html |
@@ -75,25 +78,37 @@ Curated list of machine-readable security feeds, vulnerability databases, adviso
 | Apache Kafka CVE list | `official` | Apache Kafka | HTML CVE list | https://kafka.apache.org/community/cve-list/ |
 | Apache ZooKeeper security | `official` | Apache ZooKeeper | HTML advisory page | https://zookeeper.apache.org/security.html |
 | Elastic product security advisories | `official` | Elastic products | HTML announcements and advisories | https://www.elastic.co/product-security/ |
+| Linux kernel CVE announcements | `official` | Linux kernel | Mailing-list archive dedicated to assigned kernel CVEs; per-entry advisories include descriptions, commits, and affected/fixed versions | https://lore.kernel.org/linux-cve-announce/ |
 
 ## OS and distro feeds
 | Name | Label | Scope | Format / Access | Link |
 | --- | --- | --- | --- | --- |
 | Amazon Linux Security Center (ALAS) | `official` | Amazon Linux | HTML | https://alas.aws.amazon.com/ |
+| ALT Linux errata | `official` | ALT Linux | HTML errata pages with package/version metadata and linked `BDU` + `CVE` entries per bulletin | https://packages.altlinux.org/en/errata |
 | Red Hat Security Updates | `official` | Red Hat | HTML, API | https://access.redhat.com/security/security-updates/ |
+| Ubuntu OVAL data | `official` | Ubuntu | OVAL XML / bz2 streams for supported Ubuntu releases and cloud images | https://ubuntu.com/security/oval |
 | Ubuntu Security Notices (USN) | `official` | Ubuntu | HTML notices, RSS/OVAL available | https://ubuntu.com/security/notices |
 | Debian Security Tracker | `official` | Debian | HTML tracker, backend data files | https://security-tracker.debian.org/tracker/ |
 | Arch Linux Security Tracker | `official` | Arch Linux | HTML tracker | https://security.archlinux.org/ |
 | Alpine SecDB | `official` | Alpine Linux | SecDB data, HTML; represented in OSV | https://secdb.alpinelinux.org/ |
 | Fedora Bodhi security updates | `official` | Fedora | HTML, updateinfo metadata/API-backed system | https://bodhi.fedoraproject.org/ |
+| openSUSE updateinfo metadata | `official` | openSUSE | Repository metadata with signed `updateinfo.xml` / `updateinfo.xml.zst` in official update repos; useful for package-level advisory parsing | https://download.opensuse.org/download/update/leap/15.6/oss/repodata/ |
+| AlmaLinux OVAL streams | `official` | AlmaLinux | Public OVAL XML / bz2 streams for supported AlmaLinux releases | https://security.almalinux.org/oval/ |
+| Mageia Advisories (MGASA) | `official` | Mageia | Advisory pages plus public raw `.adv` source files in official Mageia SVN; structured fields include `type`, `CVE`, package lists, references, and advisory ID | https://advisories.mageia.org/ |
 | Wolfi advisory data | `official` | Wolfi | Git repo (advisory YAML/data) | https://github.com/wolfi-dev/advisories |
-| Gentoo Linux Security Advisories (GLSA) | `official` | Gentoo | HTML advisory pages | https://security.gentoo.org/glsa/ |
+| Gentoo Linux Security Advisories (GLSA) | `official` | Gentoo | XML advisories in the Gentoo repository (`metadata/glsa`) plus RSS/HTML publication | https://security.gentoo.org/glsa/ |
+| SUSE OVAL data | `official` | SUSE Linux Enterprise / SUSE products | OVAL XML data sets in patch and vulnerability styles, including compressed variants and direct file index | https://www.suse.com/support/security/oval/ |
+| Oracle Linux security data | `official` | Oracle Linux | Consolidated and per-product OVAL definitions plus repository `updateinfo.xml.gz` metadata in official yum repos | https://linux.oracle.com/security/ |
 | Oracle Linux Security Advisories | `official` | Oracle Linux | HTML advisory pages | https://linux.oracle.com/security/ |
 | AlmaLinux Errata | `official` | AlmaLinux | HTML errata portal; represented in OSV | https://errata.almalinux.org/ |
-| Rocky Linux Errata | `official` | Rocky Linux | HTML errata portal; represented in OSV | https://errata.build.resf.org/ |
+| Rocky Linux Errata | `official` | Rocky Linux | Errata portal with documented API/RSS and repository `updateinfo.xml` metadata for package-level advisories | https://errata.build.resf.org/ |
+| NetBSD pkgsrc `pkg-vulnerabilities` | `official` | pkgsrc / NetBSD packages | Flat file, gzip/bzip2 variants, GPG-signed workflow for package vulnerability auditing | https://cdn.netbsd.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities |
+| OpenWrt Security Advisories | `official` | OpenWrt | Security-specific HTML advisory archive with per-advisory pages listing CVEs, affected versions, mitigations, and fix commits | https://openwrt.org/advisory/start |
+| Astra Linux security bulletins | `official` | Astra Linux | Security-bulletin archive for operational updates; bulletin pages describe affected components, update packages, and linked update media/repos | https://wiki.astralinux.ru/category/security-bulletins |
 | РЕД ОС security bulletins | `official` | РЕД ОС | HTML bulletins with CVE, package versions, fixes, and CVSS | https://redos.red-soft.ru/support/secure/uyazvimosti-red-os-8-0/ |
 | VMware Photon OS security advisories | `official` | Photon OS | HTML advisory pages | https://vmware.github.io/photon/docs-v5/security-advisories/ |
 | SUSE Security Updates | `official` | SUSE | HTML advisory pages | https://www.suse.com/support/update/ |
+| FreeBSD VuXML | `official` | FreeBSD and FreeBSD Ports Collection | XML vulnerability database with plain/compressed copies (`vuln.xml`, xz, zstd) and rendered indexes | https://vuxml.freebsd.org/freebsd/ |
 | FreeBSD Security Advisories | `official` | FreeBSD | HTML advisory pages | https://www.freebsd.org/security/advisories/ |
 | OpenBSD Security Advisories | `official` | OpenBSD | HTML advisory pages | https://www.openbsd.org/security.html |
 

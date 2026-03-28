@@ -17,10 +17,17 @@ Curated list of machine-readable security feeds, vulnerability databases, adviso
 ## OSV overlap
 - `represented in OSV` - source or ecosystem is documented as present in OSV.dev data
 
+## National and Government Vulnerability Databases
+| Name | Label | Agency / Country | Coverage | Direct feed / API | Portal |
+| --- | --- | --- | --- | --- | --- |
+| NVD (NIST National Vulnerability Database) | `official` | NIST / United States | CVE/NVD | API: https://services.nvd.nist.gov/rest/json/cves/2.0, feeds: https://nvd.nist.gov/vuln/data-feeds | https://nvd.nist.gov/ |
+| EUVD (European Vulnerability Database) | `official` | ENISA / European Union | Aggregated vulnerability records, exploited and critical subsets | API docs: https://euvd.enisa.europa.eu/apidoc, latest: https://euvdservices.enisa.europa.eu/api/lastvulnerabilities, exploited: https://euvdservices.enisa.europa.eu/api/exploitedvulnerabilities | https://euvd.enisa.europa.eu/ |
+| JVN iPedia / MyJVN | `official` | IPA + JPCERT/CC / Japan | JVN records, domestic vendor advisories, and vulnerability data feeds | feed hub: https://jvndb.jvn.jp/en/feed/, API docs: https://jvndb.jvn.jp/en/apis/index.html, MyJVN API: https://jvndb.jvn.jp/en/apis/myjvn/ | https://jvndb.jvn.jp/en/ |
+| BSI CERT-Bund CSAF feeds | `official` | BSI / Germany | Public advisories, WID and CVD feeds | provider metadata: https://wid.cert-bund.de/.well-known/csaf/provider-metadata.json, public BSI feed: https://wid.cert-bund.de/.well-known/csaf/white/bsi-white.json, public WID feed: https://wid.cert-bund.de/.well-known/csaf/white/bsi-wid-white.json, public CVD feed: https://wid.cert-bund.de/.well-known/csaf/white/bsi-cvd-white.json | https://wid.cert-bund.de/ |
+
 ## General vulnerability databases
 | Name | Label | Coverage | Format / Access | Link |
 | --- | --- | --- | --- | --- |
-| NVD (NIST National Vulnerability Database) | `official` | CVE/NVD | API, JSON feeds, HTML | https://nvd.nist.gov/ |
 | OSV (Open Source Vulnerabilities) | `aggregator` | Open source ecosystems | API, OSV JSON, HTML | https://osv.dev/ |
 | GitHub Advisory Database | `aggregator` | Open source ecosystems | HTML UI, Git repo (JSON/YAML data) | UI: https://github.com/advisories, data: https://github.com/github/advisory-database |
 | GitLab Advisory Database | `aggregator` | Open source ecosystems | HTML, advisory pages, source repo-backed data | https://advisories.gitlab.com/ |
